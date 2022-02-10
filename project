@@ -1,0 +1,42 @@
+'''A simple shop dictionary to add items,quantity,price. Then when a customer comes to shop shopkeeper writes his name
+enters what he wants to buy, quantity and price of his item and when he buys item then delete the items what he buys
+from the shop and also genarates a bill what he buys.'''
+print("Welcome to pyshop")
+item=[]
+quantity=[]
+price=[]    
+shop_dict={"Item":item,"Quantity":quantity,"Price":price} 
+choice = 1 
+while choice!=0:  
+    print("Choose from the below options:")
+    print("1.Add inventory")
+    print("2.Display directory")
+    print("3.Customer came for buying")
+    print("4.Quit")
+
+    choice = int(input("Enter choice in form of serial number"))
+    if choice==1:
+        i1=input("Enter Name of item")
+        item.append(i1)
+        q1=input("Enter quantity for the item added")
+        quantity.append(q1)
+        p1=input("Enter price of single item")
+        shop_dict["Item"]=i1
+        shop_dict["Quantity"]=q1
+        shop_dict["Price"]=p1
+        shop_dict["Total price"]=q1*p1
+    elif choice==2:
+       print("---------------------------------------PYSHOP-------------------------")
+       print("-----------------------------------------------------------------------")
+       print("Item","%15s"%"Quantity","%20s"%"Price","%20s"%"Total Price")
+       a=shop_dict["Item"]
+       print(a)
+       b=shop_dict["Quantity"]
+       print(b)
+       c=shop_dict["Price"]
+       print(c)
+       print("----------------------------------------------------------------------")
+        
+       for j in range(len(n)):
+          print("%5s"%i[j],"%15s"%n[j],"%20s"%p[j],"%20s"%a[j])
+          print("-------------------------------------------------------------------")  
